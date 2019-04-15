@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +80,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_actions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_factions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_missions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_nodes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_peoples.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_scripts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_themes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\missions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nodes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peoples.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scripts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_proyect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_proyect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compile_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compile_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\translate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
