@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Microsoft.VisualBasic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using hec;
 
 namespace Hacknet_Extension_Editor
 {
@@ -26,17 +30,81 @@ namespace Hacknet_Extension_Editor
 
         private void ButtonNew_Click(object sender, EventArgs e)
         {
+            if (dialogSaveProyect.ShowDialog() == DialogResult.OK)
+            {
+                if (dialogFolderProyect.ShowDialog() == DialogResult.OK)
+                {
+                    string proyect_name = Path.GetFileName(dialogSaveProyect.FileName).Replace(Path.GetExtension(dialogSaveProyect.FileName), "");
+                    string compile_folder = dialogFolderProyect.SelectedPath;
 
+                    dynamic json_settings = new JObject();
+                    dynamic json_info = new JObject();
+
+                    json_info.Language = "language";
+                    json_info.Name = "name";
+                    json_info.AllowSaves = "allowsaves";
+                    json_info.StartingVisibleNodes = "StartingVisibleNodes";
+                    json_info.StartingMission = "StartingMission";
+                    json_info.Description = "Description";
+                    json_info.StartsWithTutorial = "StartsWithTutorial";
+                    json_info.HasIntroStartup = "HasIntroStartup";
+                    json_info.StartingTheme = "StatingTheme";
+                    json_info.IntroStartupSong = "IntroStartupSong";
+                    json_info.SequencerTargetID = "SequencerTargetID";
+                    json_info.SequencerSpinUpTime = "SequencerSpinUpTime";
+                    json_info.SequencerFlagRequiredForStart = "SequencerFlagRequiredForStart";
+                    json_info.ActionsToRunOnSequencerStart = "ActionsToRunOnSequencerStart";
+                    json_info.WorkshopDescription = "WorkshopDescription";
+                    json_info.WorkshopLanguage = "WorkshopLanguage";
+                    json_info.WorkshopVisibility = "WorkshopVisibility";
+                    json_info.WorkshopTags = "WorkshopTags";
+                    json_info.WorkshopPreviewImagePath = "WorkshopPreviewImagePath";
+                    json_info.WorkshopPublishID = "WorkshopPublishID";
+
+                    json_settings.proyect_name = proyect_name;
+                    json_settings.compile_folder = compile_folder;
+
+                    ListViewItem proyect = new ListViewItem();
+                    proyect.Text = "Proyect Settings";
+                    proyect.ImageIndex = 0;
+                    proyect.Group = viewProyect.Groups[0];
+
+                    ListViewItem extensionInfo = new ListViewItem();
+                    extensionInfo.Text = "Extension Info";
+                    extensionInfo.ImageIndex = 0;
+                    extensionInfo.Group = viewProyect.Groups[0];
+
+                    viewProyect.Items.Add(proyect);
+                    viewProyect.Items.Add(extensionInfo);
+
+                    //Directory.CreateDirectory(String.Format(@"{0}\{1}", dialogSaveProyect.RestoreDirectory, proyect_name));
+                    StreamWriter file_settings = new StreamWriter(String.Format("{0}", Path.GetFullPath(dialogSaveProyect.FileName)), false);
+                    StreamWriter file_info = new StreamWriter(String.Format(@"{0}\ExtensionInfo.uep", Path.GetDirectoryName(dialogSaveProyect.FileName)), false);
+                    StreamWriter file_readme = new StreamWriter(String.Format(@"{0}\README.txt", Path.GetDirectoryName(dialogSaveProyect.FileName)), false);
+
+                    file_settings.Write(json_settings.ToString());
+                    file_settings.Close();
+                    file_info.Write(json_info.ToString());
+                    file_info.Close();
+                    file_readme.Write("hi");
+                    file_readme.Close();
+                }
+            }
         }
 
         private void ButtonOpen_Click(object sender, EventArgs e)
         {
+            string uDatos = File.ReadAllText(String.Format(@"{0}\{1}\{1}.hep", Application.StartupPath, "hola"));
+            dynamic rPersona = JsonConvert.DeserializeObject(uDatos);
 
+            MessageBox.Show(rPersona.hola.ToString());
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
+            hee gg = new hee();
 
+            gg.extensionInfo();
         }
 
         private void ButtonActions_Click(object sender, EventArgs e)
@@ -46,8 +114,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem actions = new ListViewItem();
                 actions.Text = actions_name;
-                actions.ImageIndex = 0;
-                actions.Group = viewProyect.Groups[0];
+                actions.ImageIndex = 1;
+                actions.Group = viewProyect.Groups[1];
 
                 viewProyect.Items.Add(actions);
             }
@@ -60,8 +128,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem factions = new ListViewItem();
                 factions.Text = factions_name;
-                factions.ImageIndex = 1;
-                factions.Group = viewProyect.Groups[1];
+                factions.ImageIndex = 2;
+                factions.Group = viewProyect.Groups[2];
 
                 viewProyect.Items.Add(factions);
             }
@@ -74,8 +142,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem images = new ListViewItem();
                 images.Text = images_name;
-                images.ImageIndex = 2;
-                images.Group = viewProyect.Groups[2];
+                images.ImageIndex = 3;
+                images.Group = viewProyect.Groups[3];
 
                 viewProyect.Items.Add(images);
             }
@@ -88,8 +156,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem missions = new ListViewItem();
                 missions.Text = missions_name;
-                missions.ImageIndex = 3;
-                missions.Group = viewProyect.Groups[3];
+                missions.ImageIndex = 4;
+                missions.Group = viewProyect.Groups[4];
 
                 viewProyect.Items.Add(missions);
             }
@@ -102,8 +170,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem music = new ListViewItem();
                 music.Text = music_name;
-                music.ImageIndex = 4;
-                music.Group = viewProyect.Groups[4];
+                music.ImageIndex = 5;
+                music.Group = viewProyect.Groups[5];
 
                 viewProyect.Items.Add(music);
             }
@@ -116,8 +184,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem node = new ListViewItem();
                 node.Text = nodes_name;
-                node.ImageIndex = 5;
-                node.Group = viewProyect.Groups[5];
+                node.ImageIndex = 6;
+                node.Group = viewProyect.Groups[6];
 
                 viewProyect.Items.Add(node);
             }
@@ -130,8 +198,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem peoples = new ListViewItem();
                 peoples.Text = peoples_name;
-                peoples.ImageIndex = 6;
-                peoples.Group = viewProyect.Groups[6];
+                peoples.ImageIndex = 7;
+                peoples.Group = viewProyect.Groups[7];
 
                 viewProyect.Items.Add(peoples);
             }
@@ -144,8 +212,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem scripts = new ListViewItem();
                 scripts.Text = scripts_name;
-                scripts.ImageIndex = 7;
-                scripts.Group = viewProyect.Groups[7];
+                scripts.ImageIndex = 8;
+                scripts.Group = viewProyect.Groups[8];
 
                 viewProyect.Items.Add(scripts);
             }
@@ -158,8 +226,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem themes = new ListViewItem();
                 themes.Text = themes_name;
-                themes.ImageIndex = 8;
-                themes.Group = viewProyect.Groups[8];
+                themes.ImageIndex = 9;
+                themes.Group = viewProyect.Groups[9];
 
                 viewProyect.Items.Add(themes);
             }
@@ -172,8 +240,8 @@ namespace Hacknet_Extension_Editor
             {
                 ListViewItem web = new ListViewItem();
                 web.Text = web_names;
-                web.ImageIndex = 9;
-                web.Group = viewProyect.Groups[9];
+                web.ImageIndex = 10;
+                web.Group = viewProyect.Groups[10];
 
                 viewProyect.Items.Add(web);
             }

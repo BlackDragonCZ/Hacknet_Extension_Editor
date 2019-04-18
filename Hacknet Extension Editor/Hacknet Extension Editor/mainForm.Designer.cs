@@ -29,27 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Actions", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Factions", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Images", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Missions", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Music", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Nodes", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Peoples", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Scripts", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Themes", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Web", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("General Settings", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Actions", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Factions", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Images", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Missions", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Music", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Nodes", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup19 = new System.Windows.Forms.ListViewGroup("Peoples", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup20 = new System.Windows.Forms.ListViewGroup("Scripts", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup21 = new System.Windows.Forms.ListViewGroup("Themes", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup22 = new System.Windows.Forms.ListViewGroup("Web", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.viewProyect = new System.Windows.Forms.ListView();
-            this.icons = new System.Windows.Forms.ImageList(this.components);
-            this.messageInfo = new System.Windows.Forms.ToolTip(this.components);
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buttonNew = new System.Windows.Forms.ToolStripButton();
             this.buttonOpen = new System.Windows.Forms.ToolStripButton();
             this.buttonSave = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.buttonActions = new System.Windows.Forms.ToolStripButton();
             this.buttonFactions = new System.Windows.Forms.ToolStripButton();
             this.buttonImages = new System.Windows.Forms.ToolStripButton();
@@ -60,9 +56,19 @@
             this.buttonScripts = new System.Windows.Forms.ToolStripButton();
             this.buttonThemes = new System.Windows.Forms.ToolStripButton();
             this.buttonWeb = new System.Windows.Forms.ToolStripButton();
-            this.buttonAbout = new System.Windows.Forms.ToolStripButton();
-            this.buttonCompile = new System.Windows.Forms.ToolStripButton();
             this.buttonTranslate = new System.Windows.Forms.ToolStripDropDownButton();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.meowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonAbout = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.buttonCompile = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.viewProyect = new System.Windows.Forms.ListView();
+            this.icons = new System.Windows.Forms.ImageList(this.components);
+            this.messageInfo = new System.Windows.Forms.ToolTip(this.components);
+            this.dialogSaveProyect = new System.Windows.Forms.SaveFileDialog();
+            this.dialogFolderProyect = new System.Windows.Forms.FolderBrowserDialog();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,88 +100,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 500);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(795, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // viewProyect
-            // 
-            this.viewProyect.Dock = System.Windows.Forms.DockStyle.Left;
-            this.viewProyect.FullRowSelect = true;
-            listViewGroup1.Header = "Actions";
-            listViewGroup1.Name = "actionsGroup";
-            listViewGroup2.Header = "Factions";
-            listViewGroup2.Name = "factionsGroup";
-            listViewGroup3.Header = "Images";
-            listViewGroup3.Name = "imagesGroup";
-            listViewGroup4.Header = "Missions";
-            listViewGroup4.Name = "missionsGroup";
-            listViewGroup5.Header = "Music";
-            listViewGroup5.Name = "musicGroup";
-            listViewGroup6.Header = "Nodes";
-            listViewGroup6.Name = "nodesGroup";
-            listViewGroup7.Header = "Peoples";
-            listViewGroup7.Name = "peoplesGroup";
-            listViewGroup8.Header = "Scripts";
-            listViewGroup8.Name = "scriptsGroup";
-            listViewGroup9.Header = "Themes";
-            listViewGroup9.Name = "themesGroup";
-            listViewGroup10.Header = "Web";
-            listViewGroup10.Name = "webGroup";
-            this.viewProyect.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3,
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8,
-            listViewGroup9,
-            listViewGroup10});
-            this.viewProyect.LabelWrap = false;
-            this.viewProyect.Location = new System.Drawing.Point(0, 25);
-            this.viewProyect.MultiSelect = false;
-            this.viewProyect.Name = "viewProyect";
-            this.viewProyect.Size = new System.Drawing.Size(200, 475);
-            this.viewProyect.SmallImageList = this.icons;
-            this.viewProyect.TabIndex = 3;
-            this.viewProyect.UseCompatibleStateImageBehavior = false;
-            this.viewProyect.View = System.Windows.Forms.View.SmallIcon;
-            // 
-            // icons
-            // 
-            this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
-            this.icons.TransparentColor = System.Drawing.Color.Transparent;
-            this.icons.Images.SetKeyName(0, "actions.png");
-            this.icons.Images.SetKeyName(1, "factions.png");
-            this.icons.Images.SetKeyName(2, "images.png");
-            this.icons.Images.SetKeyName(3, "missions.png");
-            this.icons.Images.SetKeyName(4, "music.png");
-            this.icons.Images.SetKeyName(5, "nodes.png");
-            this.icons.Images.SetKeyName(6, "peoples.png");
-            this.icons.Images.SetKeyName(7, "scripts.png");
-            this.icons.Images.SetKeyName(8, "themes.png");
-            this.icons.Images.SetKeyName(9, "web.png");
-            // 
-            // messageInfo
-            // 
-            this.messageInfo.IsBalloon = true;
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // buttonNew
             // 
             this.buttonNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -205,6 +129,11 @@
             this.buttonSave.Size = new System.Drawing.Size(23, 22);
             this.buttonSave.Text = "Save Proyect";
             this.buttonSave.Click += new System.EventHandler(this.ButtonSave_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // buttonActions
             // 
@@ -306,6 +235,38 @@
             this.buttonWeb.Text = "New Web";
             this.buttonWeb.Click += new System.EventHandler(this.ButtonWeb_Click);
             // 
+            // buttonTranslate
+            // 
+            this.buttonTranslate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.buttonTranslate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.buttonTranslate.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.españolToolStripMenuItem,
+            this.meowToolStripMenuItem});
+            this.buttonTranslate.Image = global::Hacknet_Extension_Editor.Properties.Resources.translate;
+            this.buttonTranslate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.buttonTranslate.Name = "buttonTranslate";
+            this.buttonTranslate.Size = new System.Drawing.Size(29, 22);
+            this.buttonTranslate.Text = "Translate";
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.englishToolStripMenuItem.Text = "en - English";
+            // 
+            // españolToolStripMenuItem
+            // 
+            this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
+            this.españolToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.españolToolStripMenuItem.Text = "es - Español";
+            // 
+            // meowToolStripMenuItem
+            // 
+            this.meowToolStripMenuItem.Name = "meowToolStripMenuItem";
+            this.meowToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.meowToolStripMenuItem.Text = "cat - Meow";
+            // 
             // buttonAbout
             // 
             this.buttonAbout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -316,6 +277,11 @@
             this.buttonAbout.Size = new System.Drawing.Size(23, 22);
             this.buttonAbout.Text = "About";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // buttonCompile
             // 
             this.buttonCompile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -325,15 +291,89 @@
             this.buttonCompile.Size = new System.Drawing.Size(23, 22);
             this.buttonCompile.Text = "Compile Extension";
             // 
-            // buttonTranslate
+            // statusStrip1
             // 
-            this.buttonTranslate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.buttonTranslate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.buttonTranslate.Image = global::Hacknet_Extension_Editor.Properties.Resources.translate;
-            this.buttonTranslate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buttonTranslate.Name = "buttonTranslate";
-            this.buttonTranslate.Size = new System.Drawing.Size(29, 22);
-            this.buttonTranslate.Text = "Translate";
+            this.statusStrip1.Location = new System.Drawing.Point(0, 500);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(795, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // viewProyect
+            // 
+            this.viewProyect.Dock = System.Windows.Forms.DockStyle.Left;
+            this.viewProyect.FullRowSelect = true;
+            listViewGroup12.Header = "General Settings";
+            listViewGroup12.Name = "generalGroup";
+            listViewGroup13.Header = "Actions";
+            listViewGroup13.Name = "actionsGroup";
+            listViewGroup14.Header = "Factions";
+            listViewGroup14.Name = "factionsGroup";
+            listViewGroup15.Header = "Images";
+            listViewGroup15.Name = "imagesGroup";
+            listViewGroup16.Header = "Missions";
+            listViewGroup16.Name = "missionsGroup";
+            listViewGroup17.Header = "Music";
+            listViewGroup17.Name = "musicGroup";
+            listViewGroup18.Header = "Nodes";
+            listViewGroup18.Name = "nodesGroup";
+            listViewGroup19.Header = "Peoples";
+            listViewGroup19.Name = "peoplesGroup";
+            listViewGroup20.Header = "Scripts";
+            listViewGroup20.Name = "scriptsGroup";
+            listViewGroup21.Header = "Themes";
+            listViewGroup21.Name = "themesGroup";
+            listViewGroup22.Header = "Web";
+            listViewGroup22.Name = "webGroup";
+            this.viewProyect.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup12,
+            listViewGroup13,
+            listViewGroup14,
+            listViewGroup15,
+            listViewGroup16,
+            listViewGroup17,
+            listViewGroup18,
+            listViewGroup19,
+            listViewGroup20,
+            listViewGroup21,
+            listViewGroup22});
+            this.viewProyect.LabelWrap = false;
+            this.viewProyect.Location = new System.Drawing.Point(0, 25);
+            this.viewProyect.MultiSelect = false;
+            this.viewProyect.Name = "viewProyect";
+            this.viewProyect.Size = new System.Drawing.Size(200, 475);
+            this.viewProyect.SmallImageList = this.icons;
+            this.viewProyect.TabIndex = 3;
+            this.viewProyect.UseCompatibleStateImageBehavior = false;
+            this.viewProyect.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // icons
+            // 
+            this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
+            this.icons.TransparentColor = System.Drawing.Color.Transparent;
+            this.icons.Images.SetKeyName(0, "settings.png");
+            this.icons.Images.SetKeyName(1, "actions.png");
+            this.icons.Images.SetKeyName(2, "factions.png");
+            this.icons.Images.SetKeyName(3, "images.png");
+            this.icons.Images.SetKeyName(4, "missions.png");
+            this.icons.Images.SetKeyName(5, "music.png");
+            this.icons.Images.SetKeyName(6, "nodes.png");
+            this.icons.Images.SetKeyName(7, "peoples.png");
+            this.icons.Images.SetKeyName(8, "scripts.png");
+            this.icons.Images.SetKeyName(9, "themes.png");
+            this.icons.Images.SetKeyName(10, "web.png");
+            // 
+            // messageInfo
+            // 
+            this.messageInfo.IsBalloon = true;
+            // 
+            // dialogSaveProyect
+            // 
+            this.dialogSaveProyect.Filter = "Hacknet Extension Proyect|*.hep";
+            // 
+            // dialogFolderProyect
+            // 
+            this.dialogFolderProyect.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
             // mainForm
             // 
@@ -379,6 +419,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton buttonCompile;
         private System.Windows.Forms.ToolStripDropDownButton buttonTranslate;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem españolToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem meowToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog dialogSaveProyect;
+        private System.Windows.Forms.FolderBrowserDialog dialogFolderProyect;
     }
 }
 
