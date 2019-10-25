@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("General Settings", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Actions", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Factions", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Images", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Missions", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Music", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Nodes", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup19 = new System.Windows.Forms.ListViewGroup("Peoples", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup20 = new System.Windows.Forms.ListViewGroup("Scripts", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup21 = new System.Windows.Forms.ListViewGroup("Themes", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup22 = new System.Windows.Forms.ListViewGroup("Web", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("General Settings", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Actions", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Factions", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Images", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Missions", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Music", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Nodes", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Peoples", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Scripts", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Themes", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Web", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.buttonNew = new System.Windows.Forms.ToolStripButton();
@@ -303,40 +303,40 @@
             // 
             this.viewProyect.Dock = System.Windows.Forms.DockStyle.Left;
             this.viewProyect.FullRowSelect = true;
-            listViewGroup12.Header = "General Settings";
-            listViewGroup12.Name = "generalGroup";
-            listViewGroup13.Header = "Actions";
-            listViewGroup13.Name = "actionsGroup";
-            listViewGroup14.Header = "Factions";
-            listViewGroup14.Name = "factionsGroup";
-            listViewGroup15.Header = "Images";
-            listViewGroup15.Name = "imagesGroup";
-            listViewGroup16.Header = "Missions";
-            listViewGroup16.Name = "missionsGroup";
-            listViewGroup17.Header = "Music";
-            listViewGroup17.Name = "musicGroup";
-            listViewGroup18.Header = "Nodes";
-            listViewGroup18.Name = "nodesGroup";
-            listViewGroup19.Header = "Peoples";
-            listViewGroup19.Name = "peoplesGroup";
-            listViewGroup20.Header = "Scripts";
-            listViewGroup20.Name = "scriptsGroup";
-            listViewGroup21.Header = "Themes";
-            listViewGroup21.Name = "themesGroup";
-            listViewGroup22.Header = "Web";
-            listViewGroup22.Name = "webGroup";
+            listViewGroup1.Header = "General Settings";
+            listViewGroup1.Name = "generalGroup";
+            listViewGroup2.Header = "Actions";
+            listViewGroup2.Name = "actionsGroup";
+            listViewGroup3.Header = "Factions";
+            listViewGroup3.Name = "factionsGroup";
+            listViewGroup4.Header = "Images";
+            listViewGroup4.Name = "imagesGroup";
+            listViewGroup5.Header = "Missions";
+            listViewGroup5.Name = "missionsGroup";
+            listViewGroup6.Header = "Music";
+            listViewGroup6.Name = "musicGroup";
+            listViewGroup7.Header = "Nodes";
+            listViewGroup7.Name = "nodesGroup";
+            listViewGroup8.Header = "Peoples";
+            listViewGroup8.Name = "peoplesGroup";
+            listViewGroup9.Header = "Scripts";
+            listViewGroup9.Name = "scriptsGroup";
+            listViewGroup10.Header = "Themes";
+            listViewGroup10.Name = "themesGroup";
+            listViewGroup11.Header = "Web";
+            listViewGroup11.Name = "webGroup";
             this.viewProyect.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup12,
-            listViewGroup13,
-            listViewGroup14,
-            listViewGroup15,
-            listViewGroup16,
-            listViewGroup17,
-            listViewGroup18,
-            listViewGroup19,
-            listViewGroup20,
-            listViewGroup21,
-            listViewGroup22});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9,
+            listViewGroup10,
+            listViewGroup11});
             this.viewProyect.LabelWrap = false;
             this.viewProyect.Location = new System.Drawing.Point(0, 25);
             this.viewProyect.MultiSelect = false;
@@ -383,6 +383,7 @@
             this.Controls.Add(this.viewProyect);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "mainForm";
             this.Text = "Hacknet Extension Editor";
